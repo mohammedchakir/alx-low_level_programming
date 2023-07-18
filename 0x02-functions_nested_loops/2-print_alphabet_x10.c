@@ -1,20 +1,27 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_alphabet_x10 - Prints the alphabet in lowercase ten times
+ * print_alphabet_x10 - Prints the alphabet in lowercase 10 times.
  */
 void print_alphabet_x10(void)
 {
-    char letter;
-    int i;
+    char letter = 'a';
 
-    for (i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i++)
     {
-        for (letter = 'a'; letter <= 'z'; letter++)
+        for (int j = 0; j < 26; j++)
         {
-            _putchar(letter);
-            if (letter == 'j') // Print a new line after every 10 characters (j is the 10th character in the alphabet)
-                _putchar('\n');
+            putchar(letter);
+            letter++;
         }
+        putchar('\n');
+        letter = 'a';
     }
 }
+
+int main(void)
+{
+    print_alphabet_x10();
+    return 0;
+}
+
