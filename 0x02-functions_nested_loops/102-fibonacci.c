@@ -15,6 +15,7 @@ int main(void)
 	while (count < 50)
 	{
 		long int next = prev1 + prev2;
+	
 		printf(", %ld", next);
 
 		prev1 = prev2;
