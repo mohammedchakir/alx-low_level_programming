@@ -1,39 +1,46 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints the n times table, starting with 0
- * @n: The number of the times table to be printed
+ * print_times_table - Prints the n times table
+ *
+ * @n: number times table (0 < n <= 15)
+ *
+ * Return: no return
  */
 void print_times_table(int n)
 {
-	if (n < 0 || n > 15)
-		return;
-
 	int a, b, op;
 
-	for (a = 0; a <= n; a++)
+	if (n >= 0 && n <= 15)
 	{
-		for (b = 0; b <= n; b++)
+		for (a = 0; a <= n; a++)
 		{
-			op = a * b;
-			if (b == 0)
+			_putchar(48);
+			for (b = 1; b <= n; b++)
 			{
-				_putchar('0' + op);
-			}
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
+				op = a * b;
+				_putchar(44);
+				_putchar(32);
 				if (op <= 9)
-					_putchar(' ');
-				if (op <= 99)
-					_putchar(' ');
-				_putchar('0' + (op / 100));
-				_putchar('0' + ((op / 10) % 10));
-				_putchar('0' + (op % 10));
+				{
+					_putchar(32);
+					_putchar(32);
+					_putchar(op + 48);
+				}
+				else if (op <= 99)
+				{
+					_putchar(32);
+					_putchar((op / 10) + 48);
+					_putchar((op % 10) + 48);
+				}
+				else
+				{
+					_putchar(((op / 100) % 10) + 48);
+					_putchar(((op / 10) % 10) + 48);
+					_putchar((op % 10) + 48);
+				}
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
-
