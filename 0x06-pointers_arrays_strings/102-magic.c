@@ -9,7 +9,7 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 
-	*((int *)(((char *)&a[2]) + (((char *)&n) - ((char *)&a[2])))) = 98;
+	*(p + 5) = 98;
 
 	printf("a[2] = %d\n", a[2]);
 	return (0);
