@@ -1,4 +1,4 @@
-## 0x05. C - Pointers, arrays and strings
+## *0x05. C - Pointers, arrays and strings*
 
 ### [0. 98 Battery st](0x05-pointers_arrays_strings/0-reset_to_98.c)
 
