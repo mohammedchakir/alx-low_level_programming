@@ -2,9 +2,9 @@
 #include <stdio.h>
 /**
  * print_diagsums - Entry point
- * @a: input 
+ * @a: input
  * @size: input
- * return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 void print_diagsums(int *a, int size)
 {
