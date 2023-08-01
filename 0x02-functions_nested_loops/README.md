@@ -1,4 +1,4 @@
-## 0x02. C - Functions, nested loops
+## *0x02. C - Functions, nested loops*
 
 #### [0. _putchar](0x02-functions_nested_loops/0-putchar.c)
 
