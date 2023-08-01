@@ -1,4 +1,4 @@
-## 0x03. c - debugging
+## *0x03. c - debugging*
 
 #### [0. Multiple mains](0x03-debugging/0-main.c)
 
