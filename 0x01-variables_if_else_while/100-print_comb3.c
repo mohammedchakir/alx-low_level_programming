@@ -16,11 +16,9 @@ int main(void)
 	{
 		for (j = i + 1; j < 10; j++)
 		{
-			/* Convert the digits to characters and print them */
 			putchar(i + '0');
 			putchar(j + '0');
 
-			/* Print a comma and a space if it's not the last combination */
 			if (i != 8 || j != 9)
 			{
 				putchar(',');
