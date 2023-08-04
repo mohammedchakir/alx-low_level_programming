@@ -4,6 +4,6 @@
 
 Create the static library called libmy.a containing all the functions listed in the main.h file of this project.
 
-#### [1. Without libraries what have we? We have no past and no future]()
+#### [1. Without libraries what have we? We have no past and no future](create_static_lib.sh)
 
 Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
