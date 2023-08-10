@@ -88,6 +88,7 @@ void _multiply(char *num1, char *num2)
 		for (j = len2 - 1; j >= 0; j--)
 		{
 			int product = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
+
 			carry = product / 10;
 			result[i + j + 1] = product % 10;
 		}
