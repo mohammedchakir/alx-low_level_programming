@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,6 +18,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
+
 		return (98);
 	}
 
@@ -76,30 +78,31 @@ void _multiply(char *num1, char *num2)
 	int len1 = _strlen(num1);
 	int len2 = _strlen(num2);
 	int size = len1 + len2;
-	long *result = calloc(size, sizeof(long));
-	int i, j, p;
+	int *result = calloc(size, sizeof(int));
+	int i, j, carry;
 
 	if (!result)
 		exit(98);
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
-		p = 0;
+		carry = 0;
 		for (j = len2 - 1; j >= 0; j--)
 		{
-			long product = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + p;
+			int product = (num1[i] - '0') * (num2[j] - '0') + result[i + j + 1] + carry;
 
-			p = product / 10;
+			carry = product / 10;
 			result[i + j + 1] = product % 10;
 		}
-		result[i + j + 1] += p;
+		result[i + j + 1] += carry;
 	}
 
-	if (result[0] == 0)
-		i = 1;
+	i = 0;
+	while (i < size - 1 && result[i] == 0)
+		i++;
 
 	for (; i < size; i++)
-		printf("%ld", result[i]);
+		printf("%d", result[i]);
 	printf("\n");
 
 	free(result);
