@@ -1,12 +1,12 @@
 ## *0x0F. C - Function pointers*
 
-#### [0. What's my name]()
+#### [0. What's my name](0-print_name.c)
 
 Write a function that prints a name.
 
 - Prototype: void print_name(char *name, void (*f)(char *));
 
-#### [1. If you spend too much time thinking about a thing, you'll never get it done]()
+#### [1. If you spend too much time thinking about a thing, you'll never get it done](1-array_iterator.c)
 
 Write a function that executes a function given as a parameter on each element of an array.
 
@@ -14,7 +14,7 @@ Write a function that executes a function given as a parameter on each element o
 - where size is the size of the array
 - and action is a pointer to the function you need to use
 
-#### [2. To hell with circumstances; I create opportunities]()
+#### [2. To hell with circumstances; I create opportunities](2-int_index.c)
 
 Write a function that searches for an integer.
 
@@ -44,9 +44,9 @@ Write a program that performs simple operations.
 - if the operator is none of the above, print Error, followed by a new line, and exit with the status 99
 - if the user tries to divide (/ or %) by 0, print Error, followed by a new line, and exit with the status 100
 - This task requires that you create four different files
-`3-calc.h`
+#### [3-calc.h](3-calc.h)
      - This file should contain all the function prototypes and data structures used by the program
-`3-op_functions.c`
+#### [3-op_functions.c](3-op_functions.c)
 - This file should contain the 5 following functions (not more):
 
      - op_add: returns the sum of a and b. Prototype: int op_add(int a, int b);
@@ -54,7 +54,7 @@ Write a program that performs simple operations.
      - op_mul: returns the product of a and b. Prototype: int op_mul(int a, int b);
      - op_div: returns the result of the division of a by b. Prototype: int op_div(int a, int b);
      - op_mod: returns the remainder of the division of a by b. Prototype: int op_mod(int a, int b);
-`3-get_op_func.c`
+#### [3-get_op_func.c](3-get_op_func.c)
 - This file should contain the function that selects the correct function to perform the operation asked by the user. You’re not allowed to declare any other function.
 
      - Prototype: int (*get_op_func(char *s))(int, int);
@@ -68,7 +68,7 @@ Write a program that performs simple operations.
      - You are not allowed to use more than one while loop in your code
      - If s does not match any of the 5 expected operators (+, -, *, /, %), return NULL
      - You are only allowed to declare these two variables in this function
-`3-main.c`
+#### [3-main.c](3-main.c)
 - This file should contain your main function only.
 
      - You are not allowed to code any other function than main in this file
@@ -77,7 +77,7 @@ Write a program that performs simple operations.
      - You are not allowed to use any kind of loop
      - You are allowed to use a maximum of 3 if statements
 
-#### [4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker]()
+#### [4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker](100-main_opcodes.c)
 
 Write a program that prints the opcodes of its own main function.
 
