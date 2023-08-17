@@ -3,49 +3,48 @@
 #include <stdio.h>
 
 /**
- * print_all - Prints anything based on the format specifier.
- * @format: The list of types of arguments passed to the function.
- * @...: Variable number of arguments.
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	unsigned int i = 0;
-	char c;
-	char *separator = "";
+	int i = 0;
+	char *str, *sep = "";
 
-	va_start(args, format);
+	va_list list;
 
-	while (format && format[i])
+	va_start(list, format);
+
+	if (format)
 	{
-		c = format[i];
-		if (c == 'c')
+		while (format[i])
 		{
-			printf("%s%c", separator, va_arg(args, int));
-			separator = ", ";
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		else if (c == 'i')
-		{
-			printf("%s%d", separator, va_arg(args, int));
-			separator = ", ";
-		}
-		else if (c == 'f')
-		{
-			printf("%s%f", separator, va_arg(args, double));
-			separator = ", ";
-		}
-		else if (c == 's')
-		{
-			char *str = va_arg(args, char *);
-
-			if (str == NULL)
-				str = "(nil)";
-			printf("%s%s", separator, str);
-			separator = ", ";
-		}
-		i++;
 	}
 
-	va_end(args);
 	printf("\n");
+	va_end(list);
 }
