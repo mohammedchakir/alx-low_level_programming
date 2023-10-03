@@ -1,5 +1,7 @@
 # *Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming*
 
+![c image](https://5.imimg.com/data5/SELLER/Default/2021/6/OD/DF/RP/23999962/c-language-500x500.jpg)
+
 ## Description:
 
 This repository contains programs written for the low-level programming.
