@@ -22,12 +22,12 @@ This repository contains programs written for the low-level programming.
 - [0x0E. C - Structures, typedef](0x0E-structures_typedef)
 - [0x0F. C - Function_pointers](0x0F-function_pointers)
 - [0x10. C - Variadic_functions](0x10-variadic_functions)
-- [0x11. C - printf](0x11-printf)
+- [0x11. C - printf](https://github.com/mohammedchakir/printf)
 - [0x12. C - Singly_linked_lists](0x12-singly_linked_lists)
 - [0x13. C - More singly linked lists](0x13-more_singly_linked_lists)
 - [0x14. C - Bit manipulation](0x14-bit_manipulation)
-- [0x15. C - File I/O](0x15-file_I/O)
-- [0x16. C - Simple Shell](0x16-simple_Shell)
+- [0x15. C - File I/O](0x15-file_io)
+- [0x16. C - Simple Shell](https://github.com/mohammedchakir/simple_shell)
 
 
 ## Requirements:
