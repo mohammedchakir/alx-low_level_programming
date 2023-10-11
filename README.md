@@ -31,6 +31,7 @@ This repository contains programs written for the low-level programming.
 - [0x15. C - File I/O](0x15-file_io)
 - [0x16. C - Simple Shell](https://github.com/mohammedchakir/simple_shell)
 - [0x17. C - Doubly linked lists](0x17-doubly_linked_lists)
+- [0x18. C - Dynamic libraries](0x18-dynamic_libraries)
 
 
 ## Requirements:
