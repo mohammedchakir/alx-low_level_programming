@@ -4,7 +4,7 @@
 
 By: Julien Barbier
 
-![c image](https://i.ytimg.com/vi/wYUC4l1qetA/sddefault.jpg)
+![c image]([https://i.ytimg.com/vi/wYUC4l1qetA/sddefault.jpg](https://miro.medium.com/v2/resize:fit:1200/1*626ZTHer28a5dtvR66Iebw.jpeg))
 
 ## *Resources:*
 
