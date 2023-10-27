@@ -32,6 +32,8 @@ This repository contains programs written for the low-level programming.
 - [0x16. C - Simple Shell](https://github.com/mohammedchakir/simple_shell)
 - [0x17. C - Doubly linked lists](0x17-doubly_linked_lists)
 - [0x18. C - Dynamic libraries](0x18-dynamic_libraries)
+- [0x19. C - Stacks, Queues - LIFO, FIFO](https://github.com/mohammedchakir/monty)
+- [0x1A. C - Hash tables](0x1A-hash_tables)
 
 
 ## Requirements:
