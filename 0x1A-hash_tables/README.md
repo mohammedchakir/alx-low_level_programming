@@ -67,7 +67,7 @@ Note that all dictionaries are not implemented using hash tables and there is a 
 
 ## *Tasks:*
 
-#### [0. >>> ht = {}]()
+#### [0. >>> ht = {}](0-hash_table_create.c)
 
 Write a function that creates a hash table.
 
@@ -76,14 +76,14 @@ Write a function that creates a hash table.
 - Returns a pointer to the newly created hash table
 - If something went wrong, your function should return `NULL`
 
-#### [1. djb2]()
+#### [1. djb2](1-djb2.c)
 
 Write a hash function implementing the djb2 algorithm.
 
 - Prototype: `unsigned long int hash_djb2(const unsigned char *str);`
 - You are allowed to copy and paste the function from [this page](https://gist.github.com/papamuziko/7bb52dfbb859fdffc4bd0f95b76f71e8)
 
-#### [2. key -> index]()
+#### [2. key -> index](2-key_index.c)
 
 Write a function that gives you the index of a key.
 
@@ -94,7 +94,7 @@ Write a function that gives you the index of a key.
 - Returns the index at which the key/value pair should be stored in the array of the hash table
 - You will have to use this hash function for all the next tasks
 
-#### [3. >>> ht['betty'] = 'cool']()
+#### [3. >>> ht['betty'] = 'cool'](3-hash_table_set.c)
 
 Write a function that adds an element to the hash table.
 
@@ -105,7 +105,7 @@ Write a function that adds an element to the hash table.
 - Returns: `1` if it succeeded, `0` otherwise
 - In case of collision, add the new node at the beginning of the list
 
-#### [4. >>> ht['betty']]()
+#### [4. >>> ht['betty']](4-hash_table_get.c)
 
 Write a function that retrieves a value associated with a key.
 
@@ -114,7 +114,7 @@ Write a function that retrieves a value associated with a key.
    - and `key` is the key you are looking for
 - Returns the value associated with the element, or `NULL` if `key` couldn’t be found
 
-#### [5. >>> print(ht)]()
+#### [5. >>> print(ht)](5-hash_table_print.c)
 
 Write a function that prints a hash table.
 
@@ -125,14 +125,14 @@ Write a function that prints a hash table.
 - Format: see example
 - If `ht` is NULL, don’t print anything
 
-#### [6. >>> del ht]()
+#### [6. >>> del ht](6-hash_table_delete.c)
 
 Write a function that deletes a hash table.
 
 - Prototype: `void hash_table_delete(hash_table_t *ht);`
    - where `ht` is the hash table
 
-#### [7. $ht['Betty'] = 'Cool']()
+#### [7. $ht['Betty'] = 'Cool'](100-sorted_hash_table.c)
 
 In [PHP](https://www.php.net/manual/en/intro-whatis.php), hash tables are ordered. Wait… WAT? How is this even possible?
 
