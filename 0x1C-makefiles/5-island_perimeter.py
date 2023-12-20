@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """Grid function"""
 
+
 def island_perimeter(grid):
     """
     Calculate the perimeter of an island.
 
     Args:
-    grid (list of list of int): A grid where 0 represents water and 1 represents land.
+    grid (list of list of int): A grid where 0 represents
+    water and 1 represents land.
 
     Returns:
     int: The perimeter of the island.
