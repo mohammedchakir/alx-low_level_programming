@@ -1,14 +1,15 @@
 ## *0x1C. C - Makefiles*
+ˋC`
 
 By Julien Barbier
 
 
-![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/273/giphy-2.gif)
+![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/273/giphy-2.gif)
 
 ## *Resources:*
 **Read or watch**:
 
--   [Makefile](https://alx-intranet.hbtn.io/rltoken/moIpBFMN3sJcVMNn5VIFlA "Makefile")
+- [Makefile](https://alx-intranet.hbtn.io/rltoken/moIpBFMN3sJcVMNn5VIFlA "Makefile")
 
 
 ## *General:*
@@ -30,7 +31,7 @@ In the following tasks, we are going to use [these files](https://github.com/ho
 
 ## *Tasks:*
 
-### 0\. make -f 0-Makefile
+#### [0. make -f 0-Makefile]()
 
 Create your first Makefile.
 
@@ -75,7 +76,7 @@ julien@ubuntu:~/0x1C. Makefiles$
 ```
 
 
-#### [1\. make -f 1-Makefile
+#### [1. make -f 1-Makefile]()
 
 
 Requirements:
@@ -96,8 +97,7 @@ julien@ubuntu:~/0x1C. Makefiles$
 
 ```
 
-#### [2\. make -f 2-Makefile
-
+#### [2. make -f 2-Makefile]()
 
 Create your first useful Makefile.
 
@@ -129,7 +129,7 @@ julien@ubuntu:~/0x1C. Makefiles$
 
 ```
 
-#### [3\. make -f 3-Makefile
+#### [3. make -f 3-Makefile]()
 
 Requirements:
 
@@ -199,7 +199,7 @@ gcc main.o school.o -o school
 julien@ubuntu:~/0x1C. Makefiles$
 ```
 
-#### [4\. A complete Makefile
+#### [4. A complete Makefile]()
 
 Requirements:
 
@@ -231,7 +231,7 @@ julien@ubuntu:~/0x1C. Makefiles$
 
 ```
 
-#### [5\. Island Perimeter
+#### [5. Island Perimeter]()
 
 **Technical interview preparation**:
 
@@ -280,7 +280,7 @@ guillaume@ubuntu:~/0x1C$
 
 ```
 
-#### [6\. make -f 100-Makefile
+#### [6. make -f 100-Makefile]()
 
 Requirements:
 
