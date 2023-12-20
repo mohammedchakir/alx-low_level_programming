@@ -1,5 +1,5 @@
 ## *0x1C. C - Makefiles*
-ˋC`
+`C`
 
 By Julien Barbier
 
