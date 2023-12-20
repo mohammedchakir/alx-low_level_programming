@@ -64,6 +64,6 @@ To view any project you're interested in accessing, kindly follow these steps:
     - `./101-strtow`
 - Duplicate the process with additional files or projects.
 
-Writer:
+Author📑:
 
 Mohammed-chakir  <https://github.com/mohammedchakir>
