@@ -1,2 +1,3 @@
-all: school
-school: gcc main.c school.c -o school
+TARGET = school
+all:
+	gcc main.c school.c -o $(TARGET)

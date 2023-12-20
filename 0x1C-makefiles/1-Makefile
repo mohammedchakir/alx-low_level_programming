@@ -1,0 +1,6 @@
+CC = gcc
+SRC = main.c school.c
+TARGET = school
+
+all:
+	$(CC) $(SRC) -o $(TARGET)
