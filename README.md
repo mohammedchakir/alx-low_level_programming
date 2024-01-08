@@ -36,6 +36,7 @@ This repository contains programs written for the low-level programming.
 - [0x1A. C - Hash tables](0x1A-hash_tables)
 - [0x1B. C - Sorting algorithms & Big O](https://github.com/mohammedchakir/sorting_algorithms)
 - [0x1C. C - Makefiles](0x1C-makefiles)
+- [0x1D. C - Binary trees](https://github.com/mohammedchakir/binary_trees)
 
 
 ## Requirements:
