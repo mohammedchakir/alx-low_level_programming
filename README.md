@@ -52,27 +52,27 @@ To view any project you're interested in accessing, kindly follow these steps:
 
 - clone the repository
 
-    - ```
-      git clone https://github.com/mohammedchakir/alx-low_level_programming
-      ```
-    - ```
-      cd alx-low_level_programming
-      ```
+```
+git clone https://github.com/mohammedchakir/alx-low_level_programming
+```
+```
+cd alx-low_level_programming
+```
 
 - open your desired project (we take malloc free project as example)
    
-    - ```
-      cd [0x0B. C - malloc, free](0x0B-malloc_free)
-      ```
+```
+cd [0x0B. C - malloc, free](0x0B-malloc_free)
+```
 
 - test your desired file
     
-    - ```
-      gcc -Wall -Werror -Wextra -pedantic -std=gnu89 101-strtow.c 101-strtow
-      ```
-    - ```
-      ./101-strtow
-      ```
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 101-strtow.c 101-strtow
+```
+```
+./ 101-strtow
+```
 - Duplicate the process with additional files or projects.
 
 Author📑:
