@@ -27,11 +27,18 @@ int exponential_search(int *array, size_t size, int value)
         bound *= 2;
     }
 
+<<<<<<< HEAD
     printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, (bound < size - 1) ? bound : size - 1);
     size_t low = bound / 2;
     size_t high = (bound < size - 1) ? bound : size - 1;
 
     // Perform binary search in the identified range
+=======
+    printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, bound);
+    size_t low = bound / 2;
+    size_t high = (bound < size - 1) ? bound : size - 1;
+
+>>>>>>> 1394664cfe962d3d3f6b319346d68b996c6e449c
     while (low <= high)
     {
         size_t mid = low + (high - low) / 2;
