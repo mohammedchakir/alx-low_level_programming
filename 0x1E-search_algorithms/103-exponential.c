@@ -10,11 +10,11 @@
  */
 int exponential_search(int *array, size_t size, int value)
 {
-    if (array == NULL)
-        return -1;
-
     size_t bound = 1;
     size_t low = 0;
+
+    if (array == NULL)
+        return -1;
 
     if (array[0] == value)
     {
