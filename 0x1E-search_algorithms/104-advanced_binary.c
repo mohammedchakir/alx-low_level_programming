@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * advanced_binary_recursive - Recursive helper function for advanced binary search
+ * advanced_binary_recursive - Recursive helper function for
+ * advanced binary search
  * @array: Pointer to the first element of the array
  * @low: Starting index of the search range
  * @high: Ending index of the search range
@@ -13,7 +14,7 @@
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
 
 /**
- * advanced_binary - Search for a value in a sorted array using advanced binary search
+ * advanced_binary - Search for value in sorted array using advanced binary search
  * @array: Pointer to the first element of the array
  * @size: Number of elements in the array
  * @value: Value to search for
