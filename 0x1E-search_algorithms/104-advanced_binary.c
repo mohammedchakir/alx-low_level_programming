@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
 
 /**
  * advanced_binary_recursive - Recursive helper function for
@@ -14,7 +13,7 @@
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
 
 /**
- * advanced_binary - Search for value in sorted array using advanced binary search
+ * advanced_binary - Search for value in sorted array using advced binry search
  * @array: Pointer to the first element of the array
  * @size: Number of elements in the array
  * @value: Value to search for
@@ -23,44 +22,44 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL)
-        return -1;
+	if (array == NULL)
+		return (-1);
 
-    return advanced_binary_recursive(array, 0, size - 1, value);
+	return (advanced_binary_recursive(array, 0, size - 1, value));
 }
 
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 {
-    size_t mid;
-    size_t i;
-    
-    if (low > high)
-        return -1;
+	size_t mid;
+	size_t i;
 
-    printf("Searching in array: ");
-    for (i = low; i <= high; i++)
-    {
-        printf("%d", array[i]);
-        if (i < high)
-            printf(", ");
-    }
-    printf("\n");
+	if (low > high)
+		return (-1);
 
-    mid = low + (high - low) / 2;
+	printf("Searching in array: ");
+	for (i = low; i <= high; i++)
+	{
+		printf("%d", array[i]);
+		if (i < high)
+			printf(", ");
+	}
+	printf("\n");
 
-    if (array[mid] == value)
-    {
-        if (mid == low || array[mid - 1] != value)
-            return mid;
-        else
-            return advanced_binary_recursive(array, low, mid, value);
-    }
-    else if (array[mid] > value)
-    {
-        return advanced_binary_recursive(array, low, mid - 1, value);
-    }
-    else
-    {
-        return advanced_binary_recursive(array, mid + 1, high, value);
-    }
+	mid = low + (high - low) / 2;
+
+	if (array[mid] == value)
+	{
+		if (mid == low || array[mid - 1] != value)
+			return (mid);
+		else
+			return (advanced_binary_recursive(array, low, mid, value));
+	}
+	else if (array[mid] > value)
+	{
+		return (advanced_binary_recursive(array, low, mid - 1, value));
+	}
+	else
+	{
+		return (advanced_binary_recursive(array, mid + 1, high, value));
+	}
 }
