@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
 
 /**
  * exponential_search - Search for a value in a sorted array using exponential search
@@ -13,28 +12,23 @@ int exponential_search(int *array, size_t size, int value)
 {
     size_t bound = 1;
     size_t low, high, i;
- 
- if (array == NULL)
+
+    if (array == NULL)
         return -1;
- 
+
     while (bound < size && array[bound] < value)
     {
         printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
         bound *= 2;
     }
 
-    printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, bound);
+    printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, (bound < size - 1) ? bound : size - 1);
     low = bound / 2;
     high = (bound < size - 1) ? bound : size - 1;
 
     for (i = low; i <= high; i++)
     {
-        printf("Searching in array: ");
-        printf("%d", array[i]);
-        if (i < high)
-            printf(", ");
-        printf("\n");
-
+        printf("Value checked array[%lu] = [%d]\n", i, array[i]);
         if (array[i] == value)
             return i;
     }
