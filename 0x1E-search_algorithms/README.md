@@ -1,32 +1,23 @@
-0x1E. C - Search Algorithms
-===========================
+## *0x1E. C - Search Algorithms*
 
--   By Wilfried Hennuyer
--   Weight: 1
+`C`   `Algorithm`
 
-Resources
----------
+By Wilfried Hennuyer
 
+## *Resources:*
 **Read or watch**:
 
 -   [Search algorithm](https://alx-intranet.hbtn.io/rltoken/ap2kuRv8qrUMyQ0-MY3EXw "Search algorithm")
 -   [Space complexity (1)](https://alx-intranet.hbtn.io/rltoken/QK9ENdoTyqGs0d4_M3XE3g "Space complexity (1)")
 
-Learning Objectives
--------------------
-
-At the end of this project, you are expected to be able to [explain to anyone](https://alx-intranet.hbtn.io/rltoken/i0Ru9NIvGBHVAlsg7w5vVg "explain to anyone"), **without the help of Google**:
-
-### General
+## *General:*
 
 -   What is a search algorithm
 -   What is a linear search
 -   What is a binary search
 -   What is the best search algorithm to use depending on your needs
 
-Requirements
-------------
-
+## *Requirements:*
 ### General
 
 -   Allowed editors: `vi`, `vim`, `emacs`
@@ -42,8 +33,7 @@ Requirements
 -   Don't forget to push your header file
 -   All your header files should be include guarded
 
-More Info
----------
+### More Info
 
 You will be asked to write files containing big O notations. Please use this format:
 
@@ -57,14 +47,9 @@ You will be asked to write files containing big O notations. Please use this for
 -   n * log(n) -> `O(nlog(n))`
 -   ...
 
-Tasks
------
+## *Tasks:*
 
-### 0\. Linear search
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [0. Linear search]()
 
 Write a function that searches for a value in an array of integers using the [Linear search algorithm](https://alx-intranet.hbtn.io/rltoken/17RKhbmvh_u4ebCwaSxCxg "Linear search algorithm")
 
@@ -126,19 +111,7 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `0-linear.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 1\. Binary search
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [1. Binary search]()
 
 Write a function that searches for a value in a sorted array of integers using the [Binary search algorithm](https://alx-intranet.hbtn.io/rltoken/SnveFJhSDE7o8bEx-kGGpA "Binary search algorithm")
 
@@ -195,83 +168,24 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `1-binary.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 2\. Big O #0
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [2. Big O #0]()
 
 What is the `time complexity` (worst case) of a linear search in an array of size `n`?
 
-**Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `2-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 3\. Big O #1
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [3. Big O #1]()
 
 What is the `space complexity` (worst case) of an iterative linear search algorithm in an array of size `n`?
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `3-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 4\. Big O #2
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [4. Big O #2]()
 
 What is the `time complexity` (worst case) of a binary search in an array of size `n`?
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `4-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 5\. Big O #3
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [5. Big O #3]()
 
 What is the `space complexity` (worst case) of a binary search in an array of size `n`?
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `5-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 6\. Big O #4
-
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [6. Big O #4]()
 
 What is the space complexity of this function / algorithm?
 
@@ -290,16 +204,7 @@ int **allocate_map(int n, int m)
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `6-O`
-### 7\. Jump search
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [7. Jump search]()
 
 Write a function that searches for a value in a sorted array of integers using the [Jump search algorithm](https://alx-intranet.hbtn.io/rltoken/1Op40kSYMN23JsOu6F3P1A "Jump search algorithm")
 
@@ -364,35 +269,12 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `100-jump.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 8\. Big O #5
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [8. Big O #5]()
 
 What is the `time complexity` (average case) of a jump search in an array of size `n`, using `step = sqrt(n)`?
 
-**Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `101-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 9\. Interpolation search
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [9. Interpolation search]()
 
 Write a function that searches for a value in a sorted array of integers using the [Interpolation search algorithm](https://alx-intranet.hbtn.io/rltoken/cswpABHiyyRmGrPkzsMTyw "Interpolation search algorithm")
 
@@ -443,19 +325,7 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `102-interpolation.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 10\. Exponential search
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [10. Exponential search]()
 
 Write a function that searches for a value in a sorted array of integers using the [Exponential search algorithm](https://alx-intranet.hbtn.io/rltoken/J7wng_ddosamvEkFl0ekqA "Exponential search algorithm")
 
@@ -524,19 +394,7 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `103-exponential.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 11\. Advanced binary search
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [11. Advanced binary search]()
 
 You may have noticed that the basic binary search does not necessarily return the index of the *first* value in the array (if this value appears more than once in the array). In this exercise, you'll have to solve this problem.
 
@@ -595,19 +453,7 @@ Found 999 at index: -1
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `104-advanced_binary.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 12\. Jump search in a singly linked list
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [12. Jump search in a singly linked list]()
 
 You might think that linear search is not as effective as any other algorithm, right? Well, we should see what happens with a singly linked list.
 
@@ -733,19 +579,7 @@ Found 999 at index: (nil)
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `105-jump_list.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 13\. Linear search in a skip list
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [13. Linear search in a skip list]()
 
 As you see now, looking for a specific value in a singly linked list always leads to browse every element of the list. A common way to optimize the time complexity of a search in a singly linked list is to modify the list itself by adding an "express lane" to browse it. A linked list with an express lane is called a [skip list](https://alx-intranet.hbtn.io/rltoken/SD8K3P6iYfmYTq39XZzo_Q "skip list"). This change does not come without consequences. Indeed, the space complexity of a search in this kind of list will grow as `sizeof(skiplist_t) > sizeof(listint_t)` (see example below).
 
@@ -876,40 +710,12 @@ Found 999 at index: (nil)
 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `106-linear_skip.c`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 14\. Big O #6
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [14. Big O #6]()
 
 What is the `time complexity` (average case) of a jump search in a singly linked list of size `n`, using `step = sqrt(n)`?
 
-**Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `107-O`
-
- Done? Help Check your code Ask for a new correction QA Review
-
-### 15\. Big O #7
-
-#advanced
-
-Score: 0.00% (Checks completed: 0.00%)
+#### [15. Big O #7]()
 
 What is the `time complexity` (average case) of a jump search in a skip list of size `n`, with an express lane using `step = sqrt(n)`?
 
-**Repo:**
-
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x1E-search_algorithms`
--   File: `108-O`
