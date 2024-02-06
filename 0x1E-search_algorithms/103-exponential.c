@@ -10,7 +10,7 @@
  * Return: Index where the value is located, or -1 if not found
  */
 
-int _binary_search(int *array, size_t low, size_t high, int value)
+int binary_search(int *array, size_t low, size_t high, int value)
 {
 
 	size_t i;
