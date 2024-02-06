@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Perform binary search within a specified range
+ * _binary_search - Perform binary search within a specified range
  * @array: Pointer to the first element of the array
  * @low: Starting index of the range
  * @high: Ending index of the range
@@ -10,7 +10,7 @@
  * Return: Index where the value is located, or -1 if not found
  */
 
-int binary_search(int *array, size_t low, size_t high, int value)
+int _binary_search(int *array, size_t low, size_t high, int value)
 {
 
 	size_t i;
