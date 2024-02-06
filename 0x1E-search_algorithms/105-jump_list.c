@@ -1,6 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
-#include <math.h>
 
 /**
  * jump_list - Search for a value in a sorted list using Jump search
@@ -18,7 +16,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
     size_t i;
 
     if (list == NULL)
-        return NULL;
+        return (NULL);
 
     while (current && current->n < value)
     {
@@ -29,7 +27,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
         printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
 
         if (current->n == value)
-            return current;
+            return (current);
     }
 
     printf("Value found between indexes [%lu] and [%lu]\n", prev->index, current->index);
@@ -38,10 +36,10 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
     {
         printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
         if (prev->n == value)
-            return prev;
+            return (prev);
 
         prev = prev->next;
     }
 
-    return NULL;
+    return (NULL);
 }
