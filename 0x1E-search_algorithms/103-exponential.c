@@ -1,6 +1,41 @@
 #include "search_algos.h"
 
 /**
+ * binary_search_range - Perform binary search within a specified range
+ * @array: Pointer to the first element of the array
+ * @low: Starting index of the range
+ * @high: Ending index of the range
+ * @value: Value to search for
+ *
+ * Return: Index where the value is located, or -1 if not found
+ */
+int binary_search_range(int *array, size_t low, size_t high, int value)
+{
+    while (low <= high)
+    {
+        size_t mid = low + (high - low) / 2;
+
+        printf("Searching in array: ");
+        for (size_t i = low; i <= high; i++)
+        {
+            printf("%d", array[i]);
+            if (i < high)
+                printf(", ");
+        }
+        printf("\n");
+
+        if (array[mid] == value)
+            return mid;
+        else if (array[mid] < value)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+
+    return -1;
+}
+
+/**
  * exponential_search - Search for a value in a sorted array using exponential search
  * @array: Pointer to the first element of the array
  * @size: Number of elements in the array
@@ -25,33 +60,13 @@ int exponential_search(int *array, size_t size, int value)
     while (bound < size && array[bound] < value)
     {
         printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
+        low = bound;
         bound *= 2;
     }
 
-    printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, (bound < size - 1) ? bound : size - 1);
+    printf("Value found between indexes [%lu] and [%lu]\n", low, (bound < size - 1) ? bound : size - 1);
 
     size_t high = (bound < size - 1) ? bound : size - 1;
 
-    while (low <= high)
-    {
-        size_t mid = low + (high - low) / 2;
-
-        printf("Searching in array: ");
-        for (size_t i = low; i <= high; i++)
-        {
-            printf("%d", array[i]);
-            if (i < high)
-                printf(", ");
-        }
-        printf("\n");
-
-        if (array[mid] == value)
-            return mid;
-        else if (array[mid] < value)
-            low = mid + 1;
-        else
-            high = mid - 1;
-    }
-
-    return -1;
+    return binary_search_range(array, low, high, value);
 }
