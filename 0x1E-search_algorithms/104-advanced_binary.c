@@ -13,10 +13,10 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
 int advanced_binary(int *array, size_t size, int value)
 {
 	size_t low = 0, high = size - 1;
-	
+
 	if (array == NULL)
 		return (-1);
-    return (advanced_binary_recursive(array, low, high, value));
+	return (advanced_binary_recursive(array, low, high, value));
 }
 
 /**
