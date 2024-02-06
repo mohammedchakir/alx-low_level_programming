@@ -12,11 +12,13 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t low = 0, high = size - 1;
+	size_t low = 0;
+	size_t high = size - 1;
 
-	if (array == NULL)
+	if (!array)
 		return (-1);
-	return (advanced_binary_recursive(array, low, high, value));
+
+	return (binary_search_recursion(array, value, low, high));
 }
 
 /**
@@ -29,7 +31,7 @@ int advanced_binary(int *array, size_t size, int value)
  *
  * Return: Index where the value is located, or -1 if not found
  */
-int binary_search_recursion(int *array, size_t high, size_t low, int value)
+int binary_search_recursion(int *array, size_t low, size_t high, int value)
 {
 	size_t mid, i;
 
