@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 
 /**
  * jump_list - Search for a value in a sorted list using Jump search
@@ -11,40 +10,31 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    size_t jump = sqrt(size);
-    listint_t *current = list, *prev = NULL;
-    size_t i;
+	size_t step, step_size;
+	listint_t *node, *jump;
 
-    if (list == NULL)
-        return NULL;
+	if (list == NULL || size == 0)
+		return (NULL);
 
-    while (current && current->n < value)
-    {
-        prev = current;
-        for (i = 0; i < jump && current->next; i++)
-            current = current->next;
+	step = 0;
+	step_size = sqrt(size);
+	for (node = jump = list; jump->index + 1 < size && jump->n < value;)
+	{
+		node = jump;
+		for (step += step_size; jump->index < step; jump = jump->next)
+		{
+			if (jump->index + 1 == size)
+				break;
+		}
+		printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
+	}
 
-        if (!current)
-        {
-            printf("Value not found\n");
-            return NULL;
-        }
-        
-        printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
-        if (current->n == value)
-            return current;
-    }
+	printf("Value found between indexes [%ld] and [%ld]\n",
+			node->index, jump->index);
 
-    printf("Value found between indexes [%lu] and [%lu]\n", prev->index, current->index);
+	for (; node->index < jump->index && node->n < value; node = node->next)
+		printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
+	printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 
-    while (prev && prev->index <= current->index)
-    {
-        printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
-        if (prev->n == value)
-            return prev;
-
-        prev = prev->next;
-    }
-
-    return NULL;
+	return (node->n == value ? node : NULL);
 }
