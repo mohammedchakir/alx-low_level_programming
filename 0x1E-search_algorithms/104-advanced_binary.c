@@ -1,15 +1,5 @@
 #include "search_algos.h"
 
-/**
- * advanced_binary_recursive - Recursive helper function for
- * advanced binary search
- * @array: Pointer to the first element of the array
- * @low: Starting index of the search range
- * @high: Ending index of the search range
- * @value: Value to search for
- *
- * Return: Index where the value is located, or -1 if not found
- */
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
 
 /**
@@ -28,6 +18,16 @@ int advanced_binary(int *array, size_t size, int value)
 	return (advanced_binary_recursive(array, 0, size - 1, value));
 }
 
+/**
+ * advanced_binary_recursive - Recursive helper function for
+ * advanced binary search
+ * @array: Pointer to the first element of the array
+ * @low: Starting index of the search range
+ * @high: Ending index of the search range
+ * @value: Value to search for
+ *
+ * Return: Index where the value is located, or -1 if not found
+ */
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 {
 	size_t mid;
