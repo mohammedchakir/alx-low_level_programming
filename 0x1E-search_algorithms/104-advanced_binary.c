@@ -36,6 +36,7 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 	if (low > high)
 		return (-1);
 
+	mid = low + (high - low) / 2;
 	printf("Searching in array: ");
 	for (i = low; i <= high; i++)
 	{
@@ -44,8 +45,6 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 			printf(", ");
 	}
 	printf("\n");
-
-	mid = low + (high - low) / 2;
 
 	if (array[mid] == value)
 	{
