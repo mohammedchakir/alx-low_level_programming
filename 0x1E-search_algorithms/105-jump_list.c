@@ -12,12 +12,14 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
+    size_t jump;
+    listint_t *current = list;
+    listint_t *prev = NULL;
+
     if (list == NULL)
         return NULL;
 
-    size_t jump = sqrt(size);
-    listint_t *current = list;
-    listint_t *prev = NULL;
+    jump = sqrt(size);
 
     while (current && current->n < value)
     {
@@ -44,4 +46,3 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
     return NULL;
 }
-
