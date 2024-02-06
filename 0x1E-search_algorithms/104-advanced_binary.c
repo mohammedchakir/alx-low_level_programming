@@ -29,24 +29,28 @@ int advanced_binary(int *array, size_t size, int value)
  *
  * Return: Index where the value is located, or -1 if not found
  */
-int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
+int binary_search_recursion(int *array, size_t high, size_t low, int value)
 {
-	size_t mid;
-	size_t i;
+	size_t mid, i;
 
-	if (low > high)
+	if (!array)
 		return (-1);
 
-	mid = low + (high - low) / 2;
-
+	mid = (low + high) / 2;
 	printf("Searching in array: ");
 	for (i = low; i <= high; i++)
-		printf("%d%s", array[i], (i < high) ? ", " : "\n");
+		printf("%i%s", array[i], i == high ? "\n" : ", ");
 
-	if (array[mid] == value)
-		return (mid);
-	else if (array[mid] > value)
-		return (advanced_binary_recursive(array, low, mid - 1, value));
-	else
-		return (advanced_binary_recursive(array, mid + 1, high, value));
+	if (array[low] == value)
+		return ((int)low);
+
+	if (array[low] != array[high])
+	{
+		if (array[mid] < value)
+			return (binary_search_recursion(array, value, mid + 1, high));
+		if (array[mid] >= value)
+			return (binary_search_recursion(array, value, low, mid));
+	}
+
+	return (-1);
 }
