@@ -24,8 +24,13 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
         for (i = 0; i < jump && current->next; i++)
             current = current->next;
 
+        if (!current)
+        {
+            printf("Value not found\n");
+            return NULL;
+        }
+        
         printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
-
         if (current->n == value)
             return current;
     }
