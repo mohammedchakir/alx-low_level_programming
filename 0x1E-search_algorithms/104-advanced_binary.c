@@ -38,26 +38,15 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 		return (-1);
 
 	mid = low + (high - low) / 2;
+
 	printf("Searching in array: ");
 	for (i = low; i <= high; i++)
-	{
-		printf("%d", array[i]);
-		printf((i < high) ? ", " : "\n");
-	}
+		printf("%d%s", array[i], (i < high) ? ", " : "\n");
 
 	if (array[mid] == value)
-	{
-		if (mid == low || array[mid - 1] != value)
-			return (mid);
-		else
-			return (advanced_binary_recursive(array, low, mid, value));
-	}
+		return (mid);
 	else if (array[mid] > value)
-	{
 		return (advanced_binary_recursive(array, low, mid - 1, value));
-	}
 	else
-	{
 		return (advanced_binary_recursive(array, mid + 1, high, value));
-	}
 }
