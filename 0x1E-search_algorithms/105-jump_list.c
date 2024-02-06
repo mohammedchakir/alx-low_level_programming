@@ -11,16 +11,17 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    size_t jump = sqrt(size);
-    listint_t *current = list, *prev = NULL;
-
     if (list == NULL)
         return NULL;
+
+    size_t jump = sqrt(size);
+    listint_t *current = list, *prev = NULL;
+    size_t i;
 
     while (current && current->n < value)
     {
         prev = current;
-        for (size_t i = 0; i < jump && current->next; i++)
+        for (i = 0; i < jump && current->next; i++)
             current = current->next;
 
         printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
