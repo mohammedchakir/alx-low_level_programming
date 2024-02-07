@@ -4,11 +4,12 @@ int binary_search_helper(int *array, int value, size_t low, size_t high);
 size_t min(size_t a, size_t b);
 
 /**
- * min - returns the minimum of two size_t values
- * @a: first value
- * @b: second value
+ * min - Determines the minimum value between two size_t parameters
+ * @a: The first size_t value
+ * @b: The second size_t value
  *
- * Return: `a` if lower or equal to `b`, `b` otherwise
+ * Returns: The smaller of the two values. If both are equal,
+ * returns either one.
  */
 size_t min(size_t a, size_t b)
 {
@@ -16,18 +17,16 @@ size_t min(size_t a, size_t b)
 }
 
 /**
- * binary_search_helper - searches for a value in an integer array using a
- * binary search algorithm, not guaranteed to return lowest index if `value`
- * appears twice in `array` (modified from `binary_search`)
- * @array: pointer to first element of array to seach
- * @value: value to search for
- * @low: starting index
- * @high: ending index
+ * binary_search_helper - Performs a binary search on an array of integers
+ *                        to find a specific value.
+ * @array: Pointer to the first element of the array to be searched.
+ * @value: The value to search for.
+ * @low: The starting index of the search range.
+ * @high: The ending index of the search range.
  *
- * Return: index containing `value`, or -1 if `value` not found or
- * `array` is NULL
+ * Returns: The index containing the value if found, otherwise -1. Returns -1
+ *          if the array is NULL or the value is not found.
  */
-
 int binary_search_helper(int *array, int value, size_t low, size_t high)
 {
 	size_t mid, i;
@@ -53,16 +52,14 @@ int binary_search_helper(int *array, int value, size_t low, size_t high)
 }
 
 /**
- * exponential_search - searches for a value in a sorted array of integers
- * using an exponential search algorithm
- * @array: pointer to first element of array to search
- * @size: number of elements in array
- * @value: value to search for
+ * exponential_search - Searches for a value in a sorted array of integers
+ *                      using the Exponential search algorithm
+ * @array: Pointer to the first element of the array to search in
+ * @size: Number of elements in @array
+ * @value: Value to search for
  *
- * Return: first index containing `value`, or -1 if `value` not found or
- * `array` is NULL
+ * Return: Index where @value is located, or -1 if not found or @array is NULL
  */
-
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t low, high, bound = 1;
