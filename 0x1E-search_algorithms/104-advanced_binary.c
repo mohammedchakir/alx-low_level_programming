@@ -49,8 +49,8 @@ int binary_search_recursion(int *array, int value, size_t left, size_t right)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t low = 0;
-	size_t high = size - 1;
+	size_t left = 0;
+	size_t right = size - 1;
 
 	if (!array)
 		return (-1);
