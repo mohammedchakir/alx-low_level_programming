@@ -3,8 +3,8 @@
 int binary_search_recursion(int *array, int value, size_t left, size_t right);
 
 /**
- * advanced_binary_recursive - Searches for a value in a sorted array of integers
- *                             using the Binary search algorithm (recursive)
+ * binary_search_recursion - Searches for a value in a sorted array
+ * of integers using the Binary search algorithm (recursive)
  * @array: Pointer to the first element of the array to search in
  * @left: Index where the search should start
  * @right: Index where the search should end
