@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -24,12 +26,12 @@ int exponential_search(int *array, size_t size, int value)
 
     min = (bound / 2) < (size - 1) ? (bound / 2) : (size - 1);
     printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, min);
-    return (binary_search(array, 0, min, value));
+    return (exponential_binary_search(array, 0, min, value));
 }
 
 /**
- * binary_search - Searches for a value in a sorted array of integers
- *                 using the Binary search algorithm
+ * exponential_binary_search - Searches for a value in a sorted array of integers
+ *                              using the Binary search algorithm
  * @array: Pointer to the first element of the array to search in
  * @left: Index where the search should start
  * @right: Index where the search should end
@@ -37,7 +39,7 @@ int exponential_search(int *array, size_t size, int value)
  *
  * Return: Index where @value is located, or -1 if not found
  */
-int binary_search(int *array, size_t left, size_t right, int value)
+int exponential_binary_search(int *array, size_t left, size_t right, int value)
 {
     size_t mid, i;
 
