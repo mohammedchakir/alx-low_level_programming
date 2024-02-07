@@ -1,5 +1,7 @@
 #include "search_algos.h"
 
+int binary_search_recursion(int *array, int value, size_t left, size_t right);
+
 /**
  * advanced_binary_recursive - Searches for a value in a sorted array of integers
  *                             using the Binary search algorithm (recursive)
@@ -10,29 +12,30 @@
  *
  * Return: Index where @value is located, or -1 if not found
  */
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
+int binary_search_recursion(int *array, int value, size_t left, size_t right)
 {
-    size_t i;
-    size_t mid;
+	size_t mid, i;
 
-    if (left > right)
-        return (-1);
+	if (!array)
+		return (-1);
 
-    mid = (left + right) / 2;
+	mid = (left + right) / 2;
+	printf("Searching in array: ");
+	for (i = left; i <= right; i++)
+		printf("%i%s", array[i], i == right ? "\n" : ", ");
 
-    printf("Searching in array:");
-    for (i = left; i <= right; i++)
-        printf("%i%s", i == right ? "\n" : ", ", array[i]);
+	if (array[left] == value)
+		return ((int)left);
 
-    if (array[left] == value)
-        return ((int)left);
-        
-    if (array[left] != array[right])
-    {
-        if (array[mid] < value)
-            return (advanced_binary_recursive(array, mid + 1, right, value));
-        if (array[mid] >= value)
-            return (advanced_binary_recursive(array, left, mid, value));
+	if (array[left] != array[right])
+	{
+		if (array[mid] < value)
+			return (binary_search_recursion(array, value, mid + 1, right));
+		if (array[mid] >= value)
+			return (binary_search_recursion(array, value, left, mid));
+	}
+
+	return (-1);
 }
 
 /**
@@ -46,11 +49,11 @@ int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    size_t left = 0;
-    size_t right = size - 1'
+	size_t low = 0;
+	size_t high = size - 1;
 
-    if (!array)
-        return (-1);
+	if (!array)
+		return (-1);
 
-    return (advanced_binary_recursive(array, left, right, value));
+	return (binary_search_recursion(array, value, left, right));
 }
