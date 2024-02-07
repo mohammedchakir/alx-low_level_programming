@@ -52,7 +52,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value);
 listint_t *create_list(int *array, size_t size);
 void free_list(listint_t *list);
 void print_list(const listint_t *list);
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value);
+int binary_search_recursion(int *array, int value, size_t left, size_t right);
 int binary_search_helper(int *array, int value, size_t low, size_t high);
 size_t min(size_t a, size_t b);
 
