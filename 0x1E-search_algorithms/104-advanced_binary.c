@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
@@ -14,7 +12,7 @@
  */
 int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 {
-    size_t mid, i;
+    size_t mid;
 
     if (left > right)
         return (-1);
