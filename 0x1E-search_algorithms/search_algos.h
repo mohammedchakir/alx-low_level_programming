@@ -53,6 +53,7 @@ listint_t *create_list(int *array, size_t size);
 void free_list(listint_t *list);
 void print_list(const listint_t *list);
 int advanced_binary_recursive(int *array, size_t low, size_t high, int value);
+int binary_search(int *array, size_t left, size_t right, int value);
 
 #endif /* SEARCH_ALGOS_H */
 
