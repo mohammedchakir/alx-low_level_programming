@@ -13,7 +13,7 @@ size_t min(size_t a, size_t b);
  */
 size_t min(size_t a, size_t b)
 {
-	return (a <= b ? a : b);
+    return (a <= b ? a : b);
 }
 
 /**
@@ -24,32 +24,33 @@ size_t min(size_t a, size_t b)
  * @low: The starting index of the search range.
  * @high: The ending index of the search range.
  *
- * Returns: The index containing the value if found, otherwise -1. Returns -1
- *          if the array is NULL or the value is not found.
+ * Returns: If the value is found in the array, returns the index containing the value.
+ *          If the array is NULL or the value is not found, returns -1.
  */
 int binary_search_helper(int *array, int value, size_t low, size_t high)
 {
-	size_t mid, i;
+    size_t mid, i;
 
-	if (!array)
-		return (-1);
+    if (!array)
+        return (-1);
 
-	while (low <= high)
-	{
-		mid = (low + high) / 2;
-		printf("Searching in array: ");
-		for (i = low; i <= high; i++)
-			printf("%i%s", array[i], i == high ? "\n" : ", ");
-		if (array[mid] < value)
-			low = mid + 1;
-		else if (array[mid] > value)
-			high = mid - 1;
-		else
-			return ((int)mid);
-	}
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+        printf("Searching in array: ");
+        for (i = low; i <= high; i++)
+            printf("%i%s", array[i], i == high ? "\n" : ", ");
+        if (array[mid] < value)
+            low = mid + 1;
+        else if (array[mid] > value)
+            high = mid - 1;
+        else
+            return ((int)mid);
+    }
 
-	return (-1);
+    return (-1);
 }
+
 
 /**
  * exponential_search - Searches for a value in a sorted array of integers
