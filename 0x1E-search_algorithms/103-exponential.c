@@ -1,19 +1,18 @@
 #include "search_algos.h"
 
-int binary_search_helper(int *array, int value, size_t low, size_t high);
 size_t min(size_t a, size_t b);
+int binary_search_helper(int *array, int value, size_t low, size_t high);
 
 /**
  * min - Determines the minimum value between two size_t parameters
  * @a: The first size_t value
  * @b: The second size_t value
  *
- * Returns: The smaller of the two values. If both are equal,
- * returns either one.
+ * Return: `a` if lower or equal to `b`, `b` otherwise
  */
 size_t min(size_t a, size_t b)
 {
-    return (a <= b ? a : b);
+	return (a <= b ? a : b);
 }
 
 /**
@@ -24,31 +23,32 @@ size_t min(size_t a, size_t b)
  * @low: The starting index of the search range.
  * @high: The ending index of the search range.
  *
- * Returns: If the value is found in the array, returns the index containing the value.
- *          If the array is NULL or the value is not found, returns -1.
+ * Return: index containing `value`, or -1 if `value` not found or
+ * `array` is NULL
  */
 int binary_search_helper(int *array, int value, size_t low, size_t high)
 {
-    size_t mid, i;
+	size_t mid, i;
 
-    if (!array)
-        return (-1);
+	if (!array)
+		return (-1);
 
-    while (low <= high)
-    {
-        mid = (low + high) / 2;
-        printf("Searching in array: ");
-        for (i = low; i <= high; i++)
-            printf("%i%s", array[i], i == high ? "\n" : ", ");
-        if (array[mid] < value)
-            low = mid + 1;
-        else if (array[mid] > value)
-            high = mid - 1;
-        else
-            return ((int)mid);
-    }
+	while (low <= high)
+	{
+		mid = (low + high) / 2;
+		printf("Searching in array: ");
+		for (i = low; i <= high; i++)
+			printf("%i%s", array[i], i == high ? "\n" : ", ");
+		if (array[mid] < value)
+			low = mid + 1;
+		else if (array[mid] > value)
+			high = mid - 1;
+		else
 
-    return (-1);
+			return ((int)mid);
+	}
+
+	return (-1);
 }
 
 
