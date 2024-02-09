@@ -1,8 +1,8 @@
-## *0x1C. C - Makefiles*
+# *0x1C. C - Makefiles*
+
 `C`
 
 By Julien Barbier
-
 
 ![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/273/giphy-2.gif)
 
